@@ -11,25 +11,28 @@ type CallDemoProps = {
 export function CallDemo({ className = "" }: CallDemoProps) {
   return (
     <div className={`demo-panel overflow-hidden ${className}`} data-demo="call">
-      <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 md:px-5">
-        <div className="flex items-center gap-3">
-          <span className="flex size-9 items-center justify-center rounded-full bg-petroleum/40 text-gold">
+      <div className="flex items-center justify-between gap-3 border-b border-border/60 px-3 py-3 sm:px-4 md:px-5">
+        <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-petroleum/40 text-gold sm:size-9">
             <Phone className="size-4" aria-hidden />
           </span>
-          <div>
-            <p className="text-sm font-medium text-ivory">{voiceDemo.caller}</p>
-            <p className="text-xs text-muted">{voiceDemo.status}</p>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-medium text-ivory">
+              {voiceDemo.caller}
+            </p>
+            <p className="truncate text-xs text-muted">{voiceDemo.status}</p>
           </div>
         </div>
-        <span className="demo-badge">
+        <span className="demo-badge shrink-0">
           <span className="size-1.5 rounded-full bg-gold animate-soft-pulse" />
-          En vivo · demo
+          <span className="sm:hidden">En vivo</span>
+          <span className="hidden sm:inline">En vivo · demo</span>
         </span>
       </div>
 
-      <div className="grid gap-5 p-4 md:grid-cols-[1fr_1.1fr] md:p-5">
+      <div className="grid gap-4 p-3 sm:gap-5 sm:p-4 md:grid-cols-[1fr_1.1fr] md:p-5">
         <div
-          className="relative h-28 overflow-hidden rounded-md bg-deep/80 md:h-36"
+          className="relative h-24 overflow-hidden rounded-md bg-deep/80 sm:h-28 md:h-36"
           data-call-wave
           aria-hidden
         >
@@ -121,7 +124,7 @@ M-70 32 C-56 28 -42 36 -28 32 S0 28 14 32 S42 36 56 32 S84 28 98 32 S126 36 140 
               <div
                 key={line.text}
                 data-call-line
-                className={`max-w-[92%] px-3 py-2 text-sm leading-relaxed md:max-w-[85%] ${
+                className={`max-w-[95%] px-3 py-2 text-[0.8125rem] leading-relaxed sm:max-w-[92%] sm:text-sm md:max-w-[85%] ${
                   isClara
                     ? "ml-auto rounded-2xl rounded-br-md border border-gold/25 bg-petroleum/45 text-ivory/95"
                     : "rounded-2xl rounded-bl-md bg-elevated text-ivory"
@@ -142,7 +145,7 @@ M-70 32 C-56 28 -42 36 -28 32 S0 28 14 32 S42 36 56 32 S84 28 98 32 S126 36 140 
       </div>
 
       <div
-        className="border-t border-border/60 bg-surface/40 px-4 py-4 md:px-5"
+        className="border-t border-border/60 bg-surface/40 px-3 py-4 sm:px-4 md:px-5"
         data-call-ticket
       >
         <p className="text-label text-gold">Gestión creada</p>

@@ -15,7 +15,7 @@ export function SceneEcosystem() {
             Una misma inteligencia.
             <span className="mt-2 block text-muted">Múltiples soluciones.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-muted">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-sm leading-relaxed text-muted sm:mt-6 sm:text-base">
             Desde la llamada del vecino hasta el acta de la junta, WIT ofrece
             aplicaciones especializadas pensadas para el día a día de la
             administración de fincas.

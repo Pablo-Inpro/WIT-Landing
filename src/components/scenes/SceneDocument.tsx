@@ -21,16 +21,16 @@ export function SceneDocument() {
             Menos trabajo manual.
             <span className="mt-2 block text-muted">Más tiempo para gestionar.</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-pretty text-sm text-muted sm:mt-5 sm:text-base">
             {product.shortDescription}
           </p>
         </div>
 
-        <div className="mt-12 md:mt-16">
+        <div className="mt-8 md:mt-16">
           <DocumentDemo />
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-3 md:mt-10">
           <CtaLink product={product} />
         </div>
       </div>

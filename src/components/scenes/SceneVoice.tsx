@@ -11,8 +11,8 @@ const product = getProduct("voice-receptor");
 export function SceneVoice() {
   return (
     <SceneShell id={product.sceneId} aria-labelledby="voice-title">
-      <div className="container-page grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
-        <div data-voice-copy>
+      <div className="container-page grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
+        <div data-voice-copy className="min-w-0">
           <p className="text-eyebrow text-gold">{product.name}</p>
           <h2
             id="voice-title"

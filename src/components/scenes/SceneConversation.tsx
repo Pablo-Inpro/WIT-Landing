@@ -11,10 +11,10 @@ const product = getProduct("neighbor-assistant");
 export function SceneConversation() {
   return (
     <SceneShell id={product.sceneId} aria-labelledby="chat-title">
-      <div className="container-page grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-        <ChatDemo className="order-2 w-full lg:order-1" />
+      <div className="container-page grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <ChatDemo className="order-2 w-full min-w-0 lg:order-1" />
 
-        <div className="order-1 lg:order-2" data-chat-copy>
+        <div className="order-1 min-w-0 lg:order-2" data-chat-copy>
           <p className="text-eyebrow text-gold">{product.name}</p>
           <h2
             id="chat-title"

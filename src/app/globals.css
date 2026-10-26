@@ -81,14 +81,29 @@ body {
 
 .text-hero {
   font-size: var(--text-hero);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
 }
 
 .text-scene {
   font-size: var(--text-scene);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) {
+  .text-scene {
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
 }
 
 .text-sub {

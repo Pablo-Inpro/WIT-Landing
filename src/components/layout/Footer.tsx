@@ -5,8 +5,8 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 border-t border-border/30 bg-transparent py-12 md:py-16">
-      <div className="container-page grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+    <footer className="relative z-10 border-t border-border/30 bg-transparent py-10 md:py-16">
+      <div className="container-page grid gap-8 sm:grid-cols-2 md:grid-cols-[1.2fr_1fr_1fr] md:gap-10">
         <div>
           <Image
             src={siteConfig.brand.logoLight}

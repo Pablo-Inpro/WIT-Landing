@@ -22,7 +22,7 @@ export function ConvergenceStage() {
         <p className="text-eyebrow text-gold">07 / La convergencia</p>
         <h2
           id="conv-title"
-          className="mt-3 font-display text-[clamp(1.65rem,3.2vw+0.4rem,2.85rem)] font-semibold leading-[1.12] tracking-tight text-ivory"
+          className="mt-3 font-display text-[clamp(1.5rem,3.2vw+0.4rem,2.85rem)] font-semibold leading-[1.15] tracking-tight text-balance text-ivory"
         >
           Diferentes soluciones.
           <span className="mt-1.5 block bg-[linear-gradient(120deg,#F5F4F0_20%,#C0A153_55%,#F5F4F0_90%)] bg-clip-text text-transparent">
@@ -109,29 +109,29 @@ export function ConvergenceStage() {
           </ul>
         </div>
 
-        {/* Mobile: logo + 2×2 grid */}
+        {/* Mobile: logo + stacked cards */}
         <div className="md:hidden">
-          <div className="mb-8 flex justify-center">
-            <div className="rounded-full border border-gold/25 bg-[#0B1114] px-6 py-4">
+          <div className="mb-6 flex justify-center">
+            <div className="rounded-full border border-gold/25 bg-[#0B1114] px-5 py-3.5">
               <Image
                 src={siteConfig.brand.logoLight}
                 alt="WIT"
                 width={180}
                 height={62}
-                className="h-auto w-28 opacity-95"
+                className="h-auto w-24 opacity-95"
               />
             </div>
           </div>
           <ul
-            className="mx-auto grid max-w-md grid-cols-2 gap-3"
+            className="mx-auto grid max-w-md grid-cols-2 gap-2.5 sm:gap-3"
             aria-label="Aplicaciones WIT"
           >
             {products.map((product, index) => (
-              <li key={product.id} className="flex justify-center">
+              <li key={product.id} className="min-w-0">
                 <AppPanel
                   product={product}
                   index={index}
-                  className="w-full max-w-[11.5rem]"
+                  className="w-full max-w-none"
                 />
               </li>
             ))}

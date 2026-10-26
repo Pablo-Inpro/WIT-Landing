@@ -35,14 +35,14 @@ export function DocumentDemo({ className = "" }: DocumentDemoProps) {
         className="demo-panel relative overflow-hidden p-4 md:p-5"
         data-doc-draft
       >
-        <div className="flex items-start justify-between gap-3">
-          <div>
+        <div className="flex flex-wrap items-start justify-between gap-2 sm:gap-3">
+          <div className="min-w-0 flex-1">
             <p className="text-label text-gold">Acta · borrador</p>
-            <h3 className="mt-2 font-display text-xl text-ivory md:text-2xl">
+            <h3 className="mt-2 font-display text-lg text-ivory sm:text-xl md:text-2xl">
               {documentDemo.meetingType}
             </h3>
           </div>
-          <span className="rounded-md border border-gold/30 px-2 py-1 text-[10px] uppercase tracking-wider text-gold">
+          <span className="max-w-full rounded-md border border-gold/30 px-2 py-1 text-[10px] uppercase leading-snug tracking-wider text-gold">
             {documentDemo.draftStatus}
           </span>
         </div>

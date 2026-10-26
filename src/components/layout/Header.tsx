@@ -97,14 +97,14 @@ export function Header() {
       {open ? (
         <nav
           id="mobile-nav"
-          className="border-t border-border/40 bg-deep/95 px-[var(--gutter)] py-6 md:hidden"
+          className="max-h-[min(70svh,28rem)] overflow-y-auto border-t border-border/40 bg-deep/95 px-[var(--gutter)] py-5 md:hidden"
           aria-label="Móvil"
         >
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-1">
             <li>
               <a
                 href="#escena-ecosistema"
-                className="text-lg text-ivory"
+                className="block rounded-md px-2 py-2.5 text-base text-ivory"
                 onClick={() => setOpen(false)}
               >
                 Ecosistema
@@ -114,7 +114,7 @@ export function Header() {
               <li key={product.id}>
                 <a
                   href={`#${product.sceneId}`}
-                  className="text-muted"
+                  className="block rounded-md px-2 py-2.5 text-base text-muted hover:bg-surface/60 hover:text-ivory"
                   onClick={() => setOpen(false)}
                 >
                   {product.name}
@@ -124,10 +124,10 @@ export function Header() {
             <li>
               <a
                 href="#escena-cierre"
-                className="text-gold"
+                className="block rounded-md px-2 py-2.5 text-base text-gold"
                 onClick={() => setOpen(false)}
               >
-                Cierre
+                DEMO
               </a>
             </li>
           </ul>

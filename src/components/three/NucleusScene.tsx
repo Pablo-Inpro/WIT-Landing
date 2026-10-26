@@ -73,8 +73,8 @@ export function NucleusScene({
       onPointerLeave={onPointerLeave}
     >
       <SceneCanvas
-        className="aspect-square h-auto w-full max-h-[min(72vh,560px)] min-h-[320px] bg-transparent md:min-h-[420px] lg:min-h-[500px]"
-        cameraPosition={[0, 0.15, isMobile ? 7.2 : 6.4]}
+        className="aspect-square h-auto w-full max-h-[min(52vh,420px)] min-h-[220px] bg-transparent sm:max-h-[min(60vh,480px)] sm:min-h-[280px] md:max-h-[min(72vh,560px)] md:min-h-[420px] lg:min-h-[500px]"
+        cameraPosition={[0, 0.15, isMobile ? 7.6 : 6.4]}
         fov={42}
         frameloop={visible ? "always" : "never"}
       >
