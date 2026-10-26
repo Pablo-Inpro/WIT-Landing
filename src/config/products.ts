@@ -37,7 +37,7 @@ export type ProductConfig = {
 export const products: readonly ProductConfig[] = [
   {
     id: "voice-receptor",
-    sceneId: "escena-voz",
+    sceneId: "conecta",
     name: "WIT Conecta",
     descriptiveName: "WIT Conecta — receptor inteligente de llamadas",
     subtitle: "Cada llamada importa.",
@@ -64,7 +64,7 @@ export const products: readonly ProductConfig[] = [
   },
   {
     id: "neighbor-assistant",
-    sceneId: "escena-conversacion",
+    sceneId: "guia",
     name: "WIT Guía",
     descriptiveName: "WIT Guía — asistente inteligente para vecinos",
     subtitle: "Respuestas cuando las necesitas.",
@@ -91,7 +91,7 @@ export const products: readonly ProductConfig[] = [
   },
   {
     id: "document-studio",
-    sceneId: "escena-documento",
+    sceneId: "actas",
     name: "WIT Actas",
     descriptiveName: "WIT Actas — generación inteligente de convocatorias y actas",
     subtitle: "Menos trabajo manual. Más tiempo para gestionar.",
@@ -118,7 +118,7 @@ export const products: readonly ProductConfig[] = [
   },
   {
     id: "info-nucleus",
-    sceneId: "escena-nucleo",
+    sceneId: "nucleo",
     name: "WIT Núcleo",
     descriptiveName: "WIT Núcleo — núcleo central de información",
     subtitle: "La información que lo conecta todo.",
@@ -154,12 +154,12 @@ export function getProduct(id: ProductId): ProductConfig {
 }
 
 export const scenes = [
-  { id: "escena-despertar", label: "01", title: "El despertar" },
-  { id: "escena-ecosistema", label: "02", title: "El ecosistema" },
-  { id: "escena-voz", label: "03", title: "La voz" },
-  { id: "escena-conversacion", label: "04", title: "La conversación" },
-  { id: "escena-documento", label: "05", title: "El documento" },
-  { id: "escena-nucleo", label: "06", title: "El núcleo" },
-  { id: "escena-convergencia", label: "07", title: "La convergencia" },
-  { id: "escena-cierre", label: "08", title: "El cierre" },
+  { id: "inicio", label: "01", title: "El despertar" },
+  { id: "ecosistema", label: "02", title: "El ecosistema" },
+  { id: "conecta", label: "03", title: "La voz" },
+  { id: "guia", label: "04", title: "La conversación" },
+  { id: "actas", label: "05", title: "El documento" },
+  { id: "nucleo", label: "06", title: "El núcleo" },
+  { id: "convergencia", label: "07", title: "La convergencia" },
+  { id: "demo", label: "08", title: "El cierre" },
 ] as const;

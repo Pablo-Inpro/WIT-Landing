@@ -10,7 +10,7 @@ import { SceneShell } from "./SceneShell";
 export function SceneAwakening() {
   return (
     <SceneShell
-      id="escena-despertar"
+      id="inicio"
       className="justify-center overflow-hidden pt-[var(--header-h)] md:min-h-[100svh] md:overflow-visible"
       aria-labelledby="hero-title"
     >
@@ -52,7 +52,7 @@ export function SceneAwakening() {
         </p>
 
         <a
-          href="#escena-ecosistema"
+          href="#ecosistema"
           data-hero-scroll
           className="transition-micro mt-10 inline-flex flex-col items-center gap-2 text-stone hover:text-gold md:mt-20"
         >

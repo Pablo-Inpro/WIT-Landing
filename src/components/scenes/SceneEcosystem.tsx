@@ -4,7 +4,7 @@ import { SceneShell } from "./SceneShell";
 
 export function SceneEcosystem() {
   return (
-    <SceneShell id="escena-ecosistema" aria-labelledby="eco-title">
+    <SceneShell id="ecosistema" aria-labelledby="eco-title">
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-center" data-eco-copy>
           <p className="text-eyebrow text-gold">El ecosistema</p>

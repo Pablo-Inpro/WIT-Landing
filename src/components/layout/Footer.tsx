@@ -41,17 +41,17 @@ export function Footer() {
           <p className="text-label text-stone">Navegación</p>
           <ul className="mt-4 space-y-2 text-sm text-muted">
             <li>
-              <a href="#escena-despertar" className="hover:text-ivory">
+              <a href="#inicio" className="hover:text-ivory">
                 Inicio
               </a>
             </li>
             <li>
-              <a href="#escena-ecosistema" className="hover:text-ivory">
+              <a href="#ecosistema" className="hover:text-ivory">
                 Ecosistema
               </a>
             </li>
             <li>
-              <a href="#escena-convergencia" className="hover:text-ivory">
+              <a href="#convergencia" className="hover:text-ivory">
                 Convergencia
               </a>
             </li>

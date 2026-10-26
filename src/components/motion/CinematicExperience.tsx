@@ -49,7 +49,7 @@ function setupScrollNarrative(
 ) {
   const q = gsap.utils.selector(root);
 
-  const hero = root.querySelector("#escena-despertar");
+  const hero = root.querySelector("#inicio");
   const canPin = window.matchMedia("(min-width: 768px)").matches;
   if (hero) {
     gsap
@@ -86,7 +86,7 @@ function setupScrollNarrative(
     return;
   }
 
-  const eco = root.querySelector("#escena-ecosistema");
+  const eco = root.querySelector("#ecosistema");
   if (eco) {
     gsap
       .timeline({
@@ -100,7 +100,7 @@ function setupScrollNarrative(
       .from(q("[data-eco-copy]"), { autoAlpha: 0, y: 40 }, 0);
   }
 
-  const voice = root.querySelector("#escena-voz");
+  const voice = root.querySelector("#conecta");
   if (voice) {
     gsap
       .timeline({
@@ -117,7 +117,7 @@ function setupScrollNarrative(
       .from(q("[data-call-ticket]"), { autoAlpha: 0, y: 24 }, 0.45);
   }
 
-  const chat = root.querySelector("#escena-conversacion");
+  const chat = root.querySelector("#guia");
   if (chat) {
     gsap
       .timeline({
@@ -136,7 +136,7 @@ function setupScrollNarrative(
       .from(q("[data-chat-doc]"), { autoAlpha: 0, y: 20, scale: 0.97 }, 0.55);
   }
 
-  const doc = root.querySelector("#escena-documento");
+  const doc = root.querySelector("#actas");
   if (doc) {
     gsap
       .timeline({
@@ -153,7 +153,7 @@ function setupScrollNarrative(
       .from(q("[data-agreement]"), { autoAlpha: 0, y: 16, stagger: 0.08 }, 0.4);
   }
 
-  const nucleus = root.querySelector("#escena-nucleo");
+  const nucleus = root.querySelector("#nucleo");
   if (nucleus) {
     gsap
       .timeline({
@@ -168,7 +168,7 @@ function setupScrollNarrative(
       .from(q("[data-nucleus-canvas]"), { autoAlpha: 0, scale: 0.94 }, 0.12);
   }
 
-  const close = root.querySelector("#escena-cierre");
+  const close = root.querySelector("#demo");
   if (close) {
     gsap
       .timeline({

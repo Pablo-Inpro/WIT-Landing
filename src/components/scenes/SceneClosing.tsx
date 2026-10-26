@@ -17,7 +17,7 @@ export function SceneClosing() {
 
   return (
     <SceneShell
-      id="escena-cierre"
+      id="demo"
       className="md:min-h-[90svh]"
       aria-labelledby="close-title"
     >

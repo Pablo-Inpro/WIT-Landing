@@ -37,7 +37,7 @@ export function Header() {
       }`}
     >
       <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-6">
-        <a href="#escena-despertar" className="relative z-10 flex items-center gap-2">
+        <a href="#inicio" className="relative z-10 flex items-center gap-2">
           <Image
             src={siteConfig.brand.logoLight}
             alt="WIT"
@@ -52,7 +52,7 @@ export function Header() {
           className="hidden items-center gap-8 md:flex"
           aria-label="Principal"
         >
-          <a href="#escena-ecosistema" className={linkClass}>
+          <a href="#ecosistema" className={linkClass}>
             Ecosistema
           </a>
           <div className="group relative inline-flex h-8 items-center">
@@ -77,7 +77,7 @@ export function Header() {
               </div>
             </div>
           </div>
-          <a href="#escena-cierre" className={linkClass}>
+          <a href="#demo" className={linkClass}>
             DEMO
           </a>
         </nav>
@@ -103,7 +103,7 @@ export function Header() {
           <ul className="flex flex-col gap-1">
             <li>
               <a
-                href="#escena-ecosistema"
+                href="#ecosistema"
                 className="block rounded-md px-2 py-2.5 text-base text-ivory"
                 onClick={() => setOpen(false)}
               >
@@ -123,7 +123,7 @@ export function Header() {
             ))}
             <li>
               <a
-                href="#escena-cierre"
+                href="#demo"
                 className="block rounded-md px-2 py-2.5 text-base text-gold"
                 onClick={() => setOpen(false)}
               >

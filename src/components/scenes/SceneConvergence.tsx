@@ -7,7 +7,7 @@ import { SceneShell } from "./SceneShell";
 export function SceneConvergence() {
   return (
     <SceneShell
-      id="escena-convergencia"
+      id="convergencia"
       className="relative z-10 overflow-hidden"
       aria-labelledby="conv-title"
     >
