@@ -1,0 +1,43 @@
+"use client";
+
+import { ChatDemo } from "@/components/demos/ChatDemo";
+import { CtaLink } from "@/components/ui/CtaLink";
+import { getProduct } from "@/config/products";
+
+import { SceneShell } from "./SceneShell";
+
+const product = getProduct("neighbor-assistant");
+
+export function SceneConversation() {
+  return (
+    <SceneShell id={product.sceneId} aria-labelledby="chat-title">
+      <div className="container-page grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+        <ChatDemo className="order-2 w-full lg:order-1" />
+
+        <div className="order-1 lg:order-2" data-chat-copy>
+          <p className="text-eyebrow text-gold">{product.name}</p>
+          <h2
+            id="chat-title"
+            className="mt-4 font-display text-scene font-semibold text-ivory"
+          >
+            {product.subtitle}
+          </h2>
+          <p className="mt-5 max-w-md text-sub text-muted">
+            {product.shortDescription}
+          </p>
+          <ul className="mt-6 space-y-2 text-sm text-muted">
+            {product.features.slice(0, 4).map((feature) => (
+              <li key={feature} className="flex gap-2">
+                <span className="mt-2 size-1 shrink-0 rounded-full bg-gold" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8">
+            <CtaLink product={product} />
+          </div>
+        </div>
+      </div>
+    </SceneShell>
+  );
+}

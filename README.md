@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WIT — The Living Ecosystem
 
-## Getting Started
+Landing cinematográfica del ecosistema WIT. Experiencia scrollytelling con GSAP, demos locales de producto y núcleo 3D opcional (React Three Fiber).
 
-First, run the development server:
+## Requisitos
+
+- Node.js 20+
+- npm 10+
+
+## Instalación y ejecución
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando        | Descripción              |
+| -------------- | ------------------------ |
+| `npm run dev`  | Servidor de desarrollo   |
+| `npm run build`| Build de producción      |
+| `npm run start`| Servir build             |
+| `npm run lint` | ESLint                   |
 
-## Learn More
+## Configuración editable
 
-To learn more about Next.js, take a look at the following resources:
+- `src/config/site.ts` — marca, CTAs, URLs canónicas, rutas de logo
+- `src/config/products.ts` — nombres, descripciones, enlaces y escenas de cada app
+- `src/config/demos.ts` — contenido ficticio de las demostraciones
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Si `demoRequestUrl` o `product.url` son `null`, la UI usa anclas internas reales (sin enlaces inventados).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assets de marca
 
-## Deploy on Vercel
+Logotipos oficiales en `public/brand/`. Copias con nombres URL-safe:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `logo-blanco.png`, `logo-verde.png`
+- `app-dorado.png`, `app-blanco.png`, `app-negativo.png`
+- `W-Dorada.png`, `W-Negra.png`, `APP.png`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Arquitectura
+
+```
+src/
+  app/                 # Next.js App Router
+  components/
+    brand/             # Logo y punto narrativo
+    demos/             # Interfaces simuladas
+    layout/            # Header, footer, progreso
+    motion/            # Orquestación GSAP
+    scenes/            # Ocho escenas narrativas
+    three/             # Núcleo WebGL
+    ui/                # Botones y CTAs
+  config/              # Productos y sitio
+  hooks/
+  lib/gsap.ts
+  styles/              # Tokens y microinteracciones
+```
+
+## Notas
+
+- No hay backend, autenticación ni APIs externas.
+- Las demos son simulaciones locales.
+- `prefers-reduced-motion` desactiva el scroll cinematográfico y deja el contenido accesible.
+- Three.js solo en la escena del núcleo; el resto es HTML + SVG + GSAP.

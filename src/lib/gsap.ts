@@ -1,0 +1,21 @@
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+let registered = false;
+
+/**
+ * Registers GSAP plugins once on the client.
+ * Import from here in client components — never from Server Components.
+ */
+export function getGsap() {
+  if (typeof window !== "undefined" && !registered) {
+    gsap.registerPlugin(ScrollTrigger);
+    registered = true;
+  }
+
+  return { gsap, ScrollTrigger };
+}
+
+export { gsap, ScrollTrigger };

@@ -1,0 +1,132 @@
+/**
+ * CSS micro-interactions. Scroll narrative lives in GSAP.
+ */
+
+@keyframes ambient-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes voice-wave-drift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-12px);
+  }
+}
+
+.animate-ambient-float {
+  animation: ambient-float 6s var(--ease-in-out) infinite;
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3.2s var(--ease-in-out) infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3.5s linear infinite;
+}
+
+.transition-micro {
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.voice-wave-svg {
+  overflow: hidden;
+}
+
+.voice-wave-line {
+  animation: voice-wave-drift 7.5s var(--ease-in-out) infinite;
+  will-change: transform;
+}
+
+.voice-wave-line--soft {
+  animation-duration: 9.5s;
+  animation-direction: reverse;
+}
+
+.voice-wave-line--faint {
+  animation-duration: 11s;
+}
+
+@keyframes conv-wave {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes conv-fade-line {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  40%,
+  70% {
+    opacity: 1;
+  }
+}
+
+.conv-panel {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conv-panel span {
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ambient-float,
+  .animate-soft-pulse,
+  .animate-shimmer,
+  .voice-wave-line {
+    animation: none;
+  }
+
+  .voice-wave-svg animate {
+    display: none;
+  }
+
+  .transition-micro {
+    transition: none;
+  }
+}

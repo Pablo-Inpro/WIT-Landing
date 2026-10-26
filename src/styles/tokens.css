@@ -1,0 +1,84 @@
+/**
+ * WIT design tokens — Cinematic Premium Technology
+ */
+:root {
+  /* Core palette — brand: #003F3E · #C0A153 · #FFFFFF · #F5F4F0 */
+  --wit-bg: #162426;
+  --wit-petroleum: #003f3e;
+  --wit-gold: #c0a153;
+  --wit-ivory: #f5f4f0;
+  --wit-stone: #5c6b6a;
+
+  /* Derived surfaces — lifted base, still dark for ivory contrast */
+  --wit-bg-elevated: #1e3032;
+  --wit-bg-deep: #0f181a;
+  --wit-surface: color-mix(in srgb, var(--wit-bg-elevated) 82%, var(--wit-petroleum));
+  --wit-surface-strong: color-mix(in srgb, var(--wit-petroleum) 48%, var(--wit-bg));
+  --wit-fg: var(--wit-ivory);
+  --wit-fg-muted: color-mix(in srgb, var(--wit-stone) 68%, var(--wit-ivory));
+  --wit-border: color-mix(in srgb, var(--wit-stone) 32%, transparent);
+  --wit-border-strong: color-mix(in srgb, var(--wit-gold) 30%, transparent);
+  --wit-glow-gold: color-mix(in srgb, var(--wit-gold) 50%, transparent);
+  --wit-glow-petroleum: color-mix(in srgb, var(--wit-petroleum) 55%, transparent);
+
+  /* Typography */
+  --font-family-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-family-eyebrow: var(--font-outfit), var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --text-hero: clamp(2.75rem, 8vw + 1rem, 8.5rem);
+  --text-scene: clamp(2rem, 4.5vw + 0.5rem, 5.5rem);
+  --text-sub: clamp(1.125rem, 1.2vw + 0.75rem, 1.75rem);
+  --text-body: clamp(1rem, 0.4vw + 0.9rem, 1.25rem);
+  --text-label: clamp(0.6875rem, 0.2vw + 0.65rem, 0.875rem);
+  --text-eyebrow: clamp(0.9375rem, 0.7vw + 0.8rem, 1.25rem);
+
+  /* Space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Layout */
+  --container-max: 72rem;
+  --container-narrow: 42rem;
+  --gutter: 1.25rem;
+  --header-h: 4rem;
+  --wit-radius-sm: 0.375rem;
+  --wit-radius-md: 0.75rem;
+  --wit-radius-lg: 1.25rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-base: 280ms;
+  --duration-slow: 700ms;
+
+  /* Effects */
+  --wit-shadow-soft: 0 24px 80px rgb(0 0 0 / 0.32);
+  --wit-shadow-gold: 0 0 40px color-mix(in srgb, var(--wit-gold) 28%, transparent);
+  --focus-ring: 0 0 0 2px var(--wit-bg), 0 0 0 4px var(--wit-gold);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2rem;
+    --header-h: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}
