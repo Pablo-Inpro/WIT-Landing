@@ -19,7 +19,7 @@ export function SceneShell({
     <section
       id={id}
       data-scene={id}
-      className={`relative z-10 flex min-h-0 flex-col justify-center bg-transparent py-16 md:min-h-[100svh] md:py-28 ${className}`}
+      className={`relative z-10 flex min-h-0 flex-col justify-center bg-transparent py-10 md:min-h-[100svh] md:py-28 ${className}`}
       aria-labelledby={labelledBy}
     >
       <div className="relative z-10 w-full">{children}</div>

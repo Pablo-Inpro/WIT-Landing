@@ -54,6 +54,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: siteConfig.brand.appGold, type: "image/png" }],
+    apple: [{ url: siteConfig.brand.appGold, type: "image/png" }],
+    shortcut: siteConfig.brand.appGold,
+  },
   ...(siteConfig.canonicalUrl
     ? { alternates: { canonical: siteConfig.canonicalUrl } }
     : {}),

@@ -34,7 +34,7 @@ export function ConvergenceStage() {
         </p>
       </header>
 
-      <div className="relative mx-auto mt-10 w-full max-w-5xl md:mt-12">
+      <div className="relative mx-auto mt-6 w-full max-w-5xl md:mt-12">
         {/* Desktop: symmetric 4 corners + center logo */}
         <div className="relative hidden min-h-[560px] md:block lg:min-h-[600px]">
           {/* Connection lines — geometric, symmetric */}

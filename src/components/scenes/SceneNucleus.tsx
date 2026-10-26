@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-import { CtaLink } from "@/components/ui/CtaLink";
 import { getProduct } from "@/config/products";
 
 import { SceneShell } from "./SceneShell";
@@ -25,20 +24,18 @@ const product = getProduct("info-nucleus");
 export function SceneNucleus() {
   return (
     <SceneShell id={product.sceneId} aria-labelledby="nucleus-title">
-      <div className="container-page grid items-center gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6 xl:gap-10">
+      <div className="container-page grid items-center gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6 xl:gap-10">
         <div data-nucleus-copy className="min-w-0">
           <p className="text-eyebrow text-gold">{product.name}</p>
           <h2
             id="nucleus-title"
-            className="mt-4 font-display text-scene font-semibold text-ivory"
+            className="mt-3 font-display text-scene font-semibold text-ivory md:mt-4"
           >
             {product.subtitle}
           </h2>
-          <p className="mt-5 max-w-md text-muted">{product.longDescription}</p>
-
-          <div className="mt-6">
-            <CtaLink product={product} />
-          </div>
+          <p className="mt-3 max-w-md text-sm text-muted md:mt-5 md:text-base">
+            {product.longDescription}
+          </p>
         </div>
 
         <NucleusScene

@@ -79,6 +79,13 @@ function setupScrollNarrative(
       );
   }
 
+  // On mobile, scrub + autoAlpha:0 leaves tall demos invisible but still in
+  // flow — huge empty gaps. Keep content visible; reserve cinematic scrub for desktop.
+  if (!canPin) {
+    ScrollTrigger.refresh();
+    return;
+  }
+
   const eco = root.querySelector("#escena-ecosistema");
   if (eco) {
     gsap

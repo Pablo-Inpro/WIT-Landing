@@ -1,7 +1,6 @@
 "use client";
 
 import { DocumentDemo } from "@/components/demos/DocumentDemo";
-import { CtaLink } from "@/components/ui/CtaLink";
 import { getProduct } from "@/config/products";
 
 import { SceneShell } from "./SceneShell";
@@ -26,12 +25,8 @@ export function SceneDocument() {
           </p>
         </div>
 
-        <div className="mt-8 md:mt-16">
+        <div className="mt-6 md:mt-16">
           <DocumentDemo />
-        </div>
-
-        <div className="mt-8 flex flex-col items-center gap-3 md:mt-10">
-          <CtaLink product={product} />
         </div>
       </div>
     </SceneShell>
